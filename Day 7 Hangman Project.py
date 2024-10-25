@@ -6,13 +6,19 @@ word_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
-#TO Do 2 - Ask the user to guess a letter
-guess = input("Insert your guess here : ").lower()
 
-# TO DO 3 - Check if the letter the user guessed is on the chosen word_list
+placeholder = ""
 for letter in chosen_word :
-    if guess == letter:
-        print("Correct")
-    else:
-        print("Wrong")
+    placeholder += "_"
+print(placeholder)
+guess = input("Guess a letter: ").lower()
 
+
+display = ""
+for letter in chosen_word:
+    if letter == guess:
+        display += guess
+    else:
+        display += "_"
+
+print(display)
